@@ -6,11 +6,21 @@
 </head>
 <body>
 <div id="app">
-    <p>
-        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>
-        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>
-        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>
-    </p>
+
+    <div>
+        <button v-for="tab in tabs" :key="tab" @click="currentTab = tab">{{tab}}</button>
+    </div>
+    <component :is="currentComponent"></component>
+
+
+
+
+<!--        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase">-->
+<!--            <div>I'm injected as slot</div>-->
+<!--        </some-el>-->
+<!--        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>-->
+<!--        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>-->
+
 </div>
 
 <script src="vue.js"></script>

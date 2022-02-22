@@ -3,6 +3,8 @@ const app = new Vue({
     data: {
         someString: 'HELLO',
         counter: 0,
+        tabs: ['one', 'two', 'three'],
+        currentTab: 'one',
     },
     methods: {
         some() {
@@ -10,6 +12,11 @@ const app = new Vue({
         },
         increase() {
             this.counter++;
+        },
+    },
+    computed: {
+        currentComponent() {
+            return `component-${this.currentTab}`;
         }
     },
     mounted() {
