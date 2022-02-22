@@ -16,7 +16,7 @@ Vue.component('some-el', {
     template: `<div> 
                   <h2 @click="some">{{title}}</h2>
                   <h2 @click="$emit('parent')">{{title}}</h2>
-                  <button @click="counter++">Increase</button>
+                  <button @click="$emit('increase')">Increase</button>
                   <p>{{counter}}</p>
                   <child-element />
                </div>`,

@@ -7,6 +7,9 @@ const app = new Vue({
     methods: {
         some() {
             console.log('from root');
+        },
+        increase() {
+            this.counter++;
         }
     },
     mounted() {

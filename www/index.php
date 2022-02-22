@@ -7,9 +7,9 @@
 <body>
 <div id="app">
     <p>
-        <some-el @parent="some" :title="someString" :counter="counter"></some-el>
-        <some-el @parent="some" :title="someString" :counter="counter"></some-el>
-        <some-el @parent="some" :title="someString" :counter="counter"></some-el>
+        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>
+        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>
+        <some-el @parent="some" :title="someString" :counter="counter" @increase="increase"></some-el>
     </p>
 </div>
 
